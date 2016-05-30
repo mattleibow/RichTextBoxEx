@@ -67,5 +67,11 @@ namespace RichTextBoxExSample
 
             var cf = richTextBoxEx.SelectionCharFormat;
         }
+
+        private void richTextBoxEx_SelectionChanged(object sender, EventArgs e)
+        {
+            fontFamilyCombo.Text = richTextBoxEx.SelectionCharFormat.FaceName;
+            fontSizeCombo.Text = richTextBoxEx.SelectionCharFormat.yHeight_Points.ToString();
+        }
     }
 }

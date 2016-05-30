@@ -39,10 +39,10 @@
             this.pasteMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.boldMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tESTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.fontFamilyCombo = new System.Windows.Forms.ToolStripComboBox();
             this.fontSizeCombo = new System.Windows.Forms.ToolStripComboBox();
-            this.tESTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripContainer.ContentPanel.SuspendLayout();
             this.toolStripContainer.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer.SuspendLayout();
@@ -56,7 +56,7 @@
             // toolStripContainer.ContentPanel
             // 
             this.toolStripContainer.ContentPanel.Controls.Add(this.richTextBoxEx);
-            this.toolStripContainer.ContentPanel.Size = new System.Drawing.Size(1058, 855);
+            this.toolStripContainer.ContentPanel.Size = new System.Drawing.Size(1058, 857);
             this.toolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer.Location = new System.Drawing.Point(0, 0);
             this.toolStripContainer.Name = "toolStripContainer";
@@ -74,9 +74,10 @@
             this.richTextBoxEx.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBoxEx.Location = new System.Drawing.Point(0, 0);
             this.richTextBoxEx.Name = "richTextBoxEx";
-            this.richTextBoxEx.Size = new System.Drawing.Size(1058, 855);
+            this.richTextBoxEx.Size = new System.Drawing.Size(1058, 857);
             this.richTextBoxEx.TabIndex = 0;
             this.richTextBoxEx.Text = "";
+            this.richTextBoxEx.SelectionChanged += new System.EventHandler(this.richTextBoxEx_SelectionChanged);
             // 
             // menuStrip
             // 
@@ -88,7 +89,7 @@
             this.tESTToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(1058, 42);
+            this.menuStrip.Size = new System.Drawing.Size(1058, 40);
             this.menuStrip.TabIndex = 1;
             this.menuStrip.Text = "menuStrip1";
             // 
@@ -97,7 +98,7 @@
             this.fileMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitMenuItem});
             this.fileMenu.Name = "fileMenu";
-            this.fileMenu.Size = new System.Drawing.Size(64, 38);
+            this.fileMenu.Size = new System.Drawing.Size(64, 36);
             this.fileMenu.Text = "&File";
             // 
             // exitMenuItem
@@ -116,7 +117,7 @@
             this.toolStripSeparator1,
             this.boldMenuItem});
             this.editMenu.Name = "editMenu";
-            this.editMenu.Size = new System.Drawing.Size(67, 38);
+            this.editMenu.Size = new System.Drawing.Size(67, 36);
             this.editMenu.Text = "&Edit";
             // 
             // cutMenuItem
@@ -152,6 +153,13 @@
             this.boldMenuItem.Text = "Bold";
             this.boldMenuItem.Click += new System.EventHandler(this.boldMenuItem_Click);
             // 
+            // tESTToolStripMenuItem
+            // 
+            this.tESTToolStripMenuItem.Name = "tESTToolStripMenuItem";
+            this.tESTToolStripMenuItem.Size = new System.Drawing.Size(78, 36);
+            this.tESTToolStripMenuItem.Text = "TEST";
+            this.tESTToolStripMenuItem.Click += new System.EventHandler(this.tESTToolStripMenuItem_Click);
+            // 
             // toolStrip1
             // 
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
@@ -159,7 +167,7 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fontFamilyCombo,
             this.fontSizeCombo});
-            this.toolStrip1.Location = new System.Drawing.Point(3, 42);
+            this.toolStrip1.Location = new System.Drawing.Point(3, 40);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(258, 40);
             this.toolStrip1.TabIndex = 2;
@@ -192,13 +200,6 @@
             this.fontSizeCombo.Name = "fontSizeCombo";
             this.fontSizeCombo.Size = new System.Drawing.Size(121, 40);
             this.fontSizeCombo.SelectedIndexChanged += new System.EventHandler(this.fontSizeCombo_SelectedIndexChanged);
-            // 
-            // tESTToolStripMenuItem
-            // 
-            this.tESTToolStripMenuItem.Name = "tESTToolStripMenuItem";
-            this.tESTToolStripMenuItem.Size = new System.Drawing.Size(78, 38);
-            this.tESTToolStripMenuItem.Text = "TEST";
-            this.tESTToolStripMenuItem.Click += new System.EventHandler(this.tESTToolStripMenuItem_Click);
             // 
             // Form1
             // 

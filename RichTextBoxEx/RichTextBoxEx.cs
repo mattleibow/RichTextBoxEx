@@ -216,7 +216,7 @@ namespace System.Windows.Forms
 
         Use_min_single_dyLineSpacing = 3,
         Use_exact_dyLineSpacing = 4,
-        Use_dyLineSpacing_div_20 = 5
+        Use_dyLineSpacing_div_20 = 5 // aka use points (or, dyLineSpacing is in points, not twips)
     }
 
     [Flags]
@@ -355,6 +355,12 @@ namespace System.Windows.Forms
         {
             get { return Encoding.Unicode.GetString(szFaceName); }
             set { szFaceName = Encoding.Unicode.GetBytes(value); }
+        }
+
+        public int yHeight_Points
+        {
+            get { return yHeight / 20; }
+            set { yHeight = value * 20; }
         }
     }
 
